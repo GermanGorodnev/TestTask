@@ -1,8 +1,7 @@
-$(document).ready(() => {
-    chrome.storage.sync.get(["obj"], (items) => {
-        colorize(items.obj);
-    });
+chrome.storage.sync.get(["obj"], (items) => {
+    colorize(items.obj);
 });
+
 
 function colorize(obj) {
     for (let key in obj) {

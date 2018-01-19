@@ -1,5 +1,5 @@
 chrome.windows.onCreated.addListener(() => {
-    fetch("words.json")
+    fetch(chrome.runtime.getURL("words.json"))
         .then((res) => {
             return res.json();
         })
