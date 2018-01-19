@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+
+    "name": "highlight",
+    "description": "подсветка",
+    "version": "1.0.0",
+
+    "browser_action": {
+        "default_icon": "iconActive.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "js": ["js/jquery-3.2.1.js", "inject.js"],
+            "matches": ["https://*/*", "http://*/*"],
+            "all_frames": true,
+            "run_at": "document_idle"
+        }
+    ]
+}
