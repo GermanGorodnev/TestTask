@@ -9,7 +9,6 @@ function colorize(obj) {
         let { text, color } = obj[key];
         repl = `<span style="background-color:${color}">${text}</span>`;
 
-        let exp = new RegExp(`${text}`);
         $(`:contains(${text})`)
             .contents()
             .filter(function () {
