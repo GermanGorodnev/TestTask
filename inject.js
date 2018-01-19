@@ -9,7 +9,7 @@ function colorize(obj) {
         let { text, color } = obj[key];
         repl = `<span style="background-color:${color}">${text}</span>`;
 
-        $(`:contains(${text})`)
+        $("body").find(`:contains(${text})`)
             .contents()
             .filter(function () {
                 return this.nodeType === 3;
